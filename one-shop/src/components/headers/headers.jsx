@@ -10,7 +10,7 @@ import logo from '../../images/logo.png'
 function Headers() {
     return (
       <>
-        <Box h="150px" w="100%" bg="white" boxShadow='0px 5px 20px 0px rgba(44, 41, 51, 0.10)'>
+        <Box h="150px" w="100%" bg="white" boxShadow='0px 5px 20px 0px rgba(44, 41, 51, 0.10)' position='relative'>
           <Container maxW="80%">
             <Box display="flex" alignItems="center" justifyContent="space-between" h="70px" >
               <Image src={logo} alt="logo is not" />
