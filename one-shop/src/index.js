@@ -5,8 +5,6 @@ import Footers from './components/footers/futers';
 import {ChakraProvider} from "@chakra-ui/react"
 import { BrowserRouter } from 'react-router-dom'
 import Main from './components/mains/main';
-import searchCatalog from './components/mains/searchCatalog/searchCatalog.jsx';
-import  Link  from './react-rouer-dom/router';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -14,7 +12,7 @@ root.render(
     <React.StrictMode>
       <ChakraProvider>
         <Headers />
-        <Link />
+        <Main />
         <Footers />
       </ChakraProvider>
     </React.StrictMode>
