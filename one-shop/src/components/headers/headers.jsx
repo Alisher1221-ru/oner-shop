@@ -6,11 +6,29 @@ import { HiUsers } from "react-icons/hi";
 import { IoGrid } from "react-icons/io5";
 import { FaShoppingCart } from "react-icons/fa";
 import logo from '../../images/logo.png'
+import { useEffect, useState } from "react";
 
 function Headers() {
+
+  let [ScrolL, setScrolL] = useState(true)
+    useEffect(() => {
+        let handelScroll = () => {
+            if (window.scrollY > 0) {
+              setScrolL(false)
+            }
+            else{
+              setScrolL(true)
+            }
+        }
+        window.addEventListener('scroll', handelScroll)
+        return () => {
+            window.removeEventListener('scroll', handelScroll)
+        }
+    }, [])
+
     return (
       <>
-        <Box h="150px" w="100%" bg="white" boxShadow='0px 5px 20px 0px rgba(44, 41, 51, 0.10)' position='relative'>
+        <Box w="100%" bg="white" boxShadow='0px 5px 20px 0px rgba(44, 41, 51, 0.10)' position='relative'>
           <Container maxW="80%">
             <Box display="flex" alignItems="center" justifyContent="space-between" h="70px" >
               <Image src={logo} alt="logo is not" />
@@ -37,7 +55,7 @@ function Headers() {
             </Box>
           </Container>
           <Box w="100%" h="2px" bg="gray.200"></Box>
-          <Container maxW="80%">
+          <Container maxW="80%" transition='all 0.7s ease' h={ScrolL ? "auto" : '0px'} overflow='hidden'>
             <Box display="flex" alignItems="center" justifyContent="space-between" h="70px">
 
               <Box display="flex" alignItems="center" justifyContent="center" p="6px 15px" bg="rgba(89, 70, 215, 1)" borderRadius="10px">
