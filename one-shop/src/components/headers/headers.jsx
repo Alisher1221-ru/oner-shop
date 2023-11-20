@@ -27,8 +27,8 @@ function Headers() {
     }, [])
 
     return (
-      <>
-        <Box w="100%" bg="white" boxShadow='0px 5px 20px 0px rgba(44, 41, 51, 0.10)' position='relative'>
+      <Box h='140px'>
+        <Box w="100%" bg="white" boxShadow='0px 5px 20px 0px rgba(44, 41, 51, 0.10)' position='fixed' top='0' zIndex='10'>
           <Container maxW="80%">
             <Box display="flex" alignItems="center" justifyContent="space-between" h="70px" >
               <Image src={logo} alt="logo is not" />
@@ -55,7 +55,7 @@ function Headers() {
             </Box>
           </Container>
           <Box w="100%" h="2px" bg="gray.200"></Box>
-          <Container maxW="80%" transition='all 0.7s ease' h={ScrolL ? "auto" : '0px'} overflow='hidden'>
+          <Container maxW="80%" transition='all 0.3s ease' h={ScrolL ? "70px" : '0px'} overflow='hidden'>
             <Box display="flex" alignItems="center" justifyContent="space-between" h="70px">
 
               <Box display="flex" alignItems="center" justifyContent="center" p="6px 15px" bg="rgba(89, 70, 215, 1)" borderRadius="10px">
@@ -111,7 +111,7 @@ function Headers() {
             </Box>
           </Container>
         </Box>
-      </>
+      </Box>
     );
 }
 
